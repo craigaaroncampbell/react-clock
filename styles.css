@@ -1,0 +1,121 @@
+.clock-face {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: blue;
+  position: relative;
+}
+
+.clock-seconds {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 50%;
+  height: 10px;
+  width: 250px;
+  background: red;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+
+}
+
+.clock-minutes {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 50%;
+  height: 10px;
+  width: 250px;
+  background: black;
+  transform-origin: top left;
+  transform: rotate(-45deg);
+
+}
+
+
+.clock-hours {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 50%;
+  height: 10px;
+  width: 200px;
+  background: black;
+  transform-origin: top left;
+  transform: rotate(0deg);
+
+}
+
+.marker {
+  display: inline-block;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+}
+
+.m12 {
+  left: 250px;
+  top: 0;
+}
+
+.m3 {
+  right: 0;
+  top: 250px;
+
+}
+
+.m6 {
+  left: 250px;
+  bottom: 0;
+}
+
+.m9 {
+  left: 0;
+  top: 250px;
+}
+
+
+
+.m1 {
+  right: 125px;
+  top:  33.5px;
+}
+
+.m11 {
+  left: 125px;
+  top:  33.5px;
+}
+
+.m2 {
+  right: 33.5px;
+  top: 125px;
+}
+
+.m10 {
+  left: 33.5px;
+  top: 125px;
+}
+
+
+.m4 {
+  right: 33.5px;
+  bottom:  125px;
+}
+
+.m8 {
+  left: 33.5px;
+  bottom:  125px;
+}
+
+.m5 {
+  right: 125px;
+  bottom: 33.5px;
+}
+
+.m7 {
+  left: 125px;
+  bottom: 33.5px;
+}
+
+
+*{
+  outline: 1px dashed green;
+}
