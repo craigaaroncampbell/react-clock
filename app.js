@@ -3,4 +3,13 @@ import ReactDOM from 'react-dom';
 import Clock from './Clock';
 import './styles.css';
 
-ReactDOM.render(<Clock user="Craig" hours={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}/>, document.getElementById('root'));
+let hours = [];
+let minutes = [];
+
+for (var i = 1; i < 60; i++) {
+  if (i < 13) hours.push(i);
+  if (i%5) minutes.push(i);
+}
+
+
+ReactDOM.render(<Clock user="Craig" hours={hours} minutes={minutes}/>, document.getElementById('root'));

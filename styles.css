@@ -6,13 +6,13 @@
   position: relative;
 }
 
+/*clock hands*/
 .hand {
   position: absolute;
   top: calc(50% - 1px);
   left: 50%;
   height: 2px;
   width: 50%;
-  background: black;
   border-radius: 1px;
   transform-origin: 1px 1px;
   z-index: 2;
@@ -23,14 +23,16 @@
 }
 
 .minute-hand {
-
+  background: black;
 }
 
 
 .hour-hand {
   width: 40%;
+  background: black;
 }
 
+/*hour markers*/
 .hour {
   position: absolute;
   display: table;
@@ -70,8 +72,8 @@
 
 
 .hour1 {
-  right: calc(25% - 1%);
-  top:  calc(6.7% - 0.5%);
+  right: calc(25% - 1.5%);
+  top:  calc(6.7% - 0%);
 }
 
 .hour11 {
@@ -81,31 +83,335 @@
 
 .hour2 {
   right: calc(6.7% - 0.5%);
-  top: calc(25% - 1%);
+  top: calc(25% - 1.5%);
 }
 
 .hour10 {
-  left: calc(6.7% - 0.5%);
-  top: calc(25% - 1%);
+  left: calc(6.7% - 0.25%);
+  top: calc(25% - 1.5%);
 }
 
 
 .hour4 {
   right: calc(6.7% - 0.5%);
-  bottom:  calc(25% - 1%);
+  bottom:  calc(25% - 1.5%);
 }
 
 .hour8 {
-  left: calc(6.7% - 0.5%);
-  bottom:  calc(25% - 1%);
+  left: calc(6.7% - 0.25%);
+  bottom:  calc(25% - 1.25%);
 }
 
 .hour5 {
-  right: calc(25% - 1%);
-  bottom: calc(6.7% - 0.5%);
+  right: calc(25% - 1.5%);
+  bottom: calc(6.7% - 0%);
 }
 
 .hour7 {
   left: calc(25% - 1%);
   bottom: calc(6.7% - 0.5%);
+}
+
+/* minute tick marks */
+.minute {
+  position: absolute;
+  width: 5%;
+  height: 2px;
+  background: #444;
+}
+
+/*top and bottom ticks 0 - 30 degrees up and down from horizontal*/
+.minute14{
+  transform: rotate(-6deg);
+  right: calc(50% - (50% * 0.994521895));
+  top: calc(50% - (50% * 0.10452856));
+}
+
+.minute13{
+  transform: rotate(-12deg);
+  right: calc(50% - (50% * 0.9781476));
+  top: calc(50% - (50% * 0.20791169) + 0.5%);
+}
+
+
+.minute12{
+  transform: rotate(-18deg);
+  right: calc(50% - (50% * 0.951056));
+  top: calc(50% - (50% * 0.30901699) + 1%);
+}
+
+.minute11{
+  transform: rotate(-24deg);
+  right: calc(50% - (50% * 0.90.913545) - 1%);
+  top: calc(50% - (50% * 0.4067366431) + 1%);
+}
+
+.minute16{
+  transform: rotate(6deg);
+  right: calc(50% - (50% * 0.994521895));
+  bottom: calc(50% - (50% * 0.10452856));
+}
+
+.minute17{
+  transform: rotate(12deg);
+  right: calc(50% - (50% * 0.9781476));
+  bottom: calc(50% - (50% * 0.20791169) + 0.5%);
+}
+
+
+.minute18{
+  transform: rotate(18deg);
+  right: calc(50% - (50% * 0.951056));
+  bottom: calc(50% - (50% * 0.30901699) + 1%);
+}
+
+.minute19{
+  transform: rotate(24deg);
+  right: calc(50% - (50% * 0.90.913545) - 1%);
+  bottom: calc(50% - (50% * 0.4067366431) + 1%);
+}
+
+
+.minute46{
+  transform: rotate(186deg);
+  left: calc(50% - (50% * 0.994521895));
+  top: calc(50% - (50% * 0.10452856));
+}
+
+.minute47{
+  transform: rotate(192deg);
+  left: calc(50% - (50% * 0.9781476));
+  top: calc(50% - (50% * 0.20791169) + 0.5%);
+}
+
+
+.minute48{
+  transform: rotate(198deg);
+  left: calc(50% - (50% * 0.951056));
+  top: calc(50% - (50% * 0.30901699) + 1%);
+}
+
+.minute49{
+  transform: rotate(206deg);
+  left: calc(50% - (50% * 0.90.913545) - 1%);
+  top: calc(50% - (50% * 0.4067366431) + 1%);
+}
+
+.minute44{
+  transform: rotate(174deg);
+  left: calc(50% - (50% * 0.994521895));
+  bottom: calc(50% - (50% * 0.10452856));
+}
+
+.minute43{
+  transform: rotate(168deg);
+  left: calc(50% - (50% * 0.9781476));
+  bottom: calc(50% - (50% * 0.20791169) + 0.5%);
+}
+
+
+.minute42{
+  transform: rotate(162deg);
+  left: calc(50% - (50% * 0.951056));
+  bottom: calc(50% - (50% * 0.30901699) + 1%);
+}
+
+.minute41{
+  transform: rotate(154deg);
+  left: calc(50% - (50% * 0.90.913545) - 1%);
+  bottom: calc(50% - (50% * 0.4067366431) + 1%);
+}
+
+/*top and bottom ticks 30 - 60 degrees up and down from horizontal*/
+.minute9{
+  transform: rotate(-36deg);
+  right: calc(50% - (50% * 0.809012) - 0.5%);
+  top: calc(50% - (50% * 0.587785) + 1%);
+}
+
+.minute8{
+  transform: rotate(-42deg);
+  right: calc(50% - (50% * 0.743115) - 0.5%);
+  top: calc(50% - (50% * 0.66913) + 1%);
+}
+
+.minute7{
+  transform: rotate(-48deg);
+  right: calc(50% - (50% * 0.6691306) - 1%);
+  top: calc(50% - (50% * 0.743145) + 1.5%);
+}
+
+.minute6{
+  transform: rotate(-54deg);
+  right: calc(50% - (50% * 0.587785) - 1.5%);
+  top: calc(50% - (50% * 0.809017) + 2%);
+}
+
+.minute51{
+  transform: rotate(218deg);
+  left: calc(50% - (50% * 0.809012) - 0.5%);
+  top: calc(50% - (50% * 0.587785) + 1%);
+}
+
+.minute52{
+  transform: rotate(224deg);
+  left: calc(50% - (50% * 0.743115) - 0.5%);
+  top: calc(50% - (50% * 0.66913) + 1%);
+}
+
+.minute53{
+  transform: rotate(230deg);
+  left: calc(50% - (50% * 0.6691306) - 1%);
+  top: calc(50% - (50% * 0.743145) + 1.5%);
+}
+
+.minute54{
+  transform: rotate(236deg);
+  left: calc(50% - (50% * 0.587785) - 1.5%);
+  top: calc(50% - (50% * 0.809017) + 2%);
+}
+
+.minute39{
+  transform: rotate(148deg);
+  left: calc(50% - (50% * 0.809012) - 0.5%);
+  bottom: calc(50% - (50% * 0.587785) + 1%);
+}
+
+.minute38{
+  transform: rotate(142deg);
+  left: calc(50% - (50% * 0.743115) - 0.5%);
+  bottom: calc(50% - (50% * 0.66913) + 1%);
+}
+
+.minute37{
+  transform: rotate(136deg);
+  left: calc(50% - (50% * 0.6691306) - 1%);
+  bottom: calc(50% - (50% * 0.743145) + 1.5%);
+}
+
+.minute36{
+  transform: rotate(130deg);
+  left: calc(50% - (50% * 0.587785) - 1.5%);
+  bottom: calc(50% - (50% * 0.809017) + 2%);
+}
+
+.minute21{
+  transform: rotate(36deg);
+  right: calc(50% - (50% * 0.809012) - 0.5%);
+  bottom: calc(50% - (50% * 0.587785) + 1%);
+}
+
+.minute22{
+  transform: rotate(42deg);
+  right: calc(50% - (50% * 0.743115) - 0.5%);
+  bottom: calc(50% - (50% * 0.66913) + 1.5%);
+}
+
+.minute23{
+  transform: rotate(48deg);
+  right: calc(50% - (50% * 0.6691306) - 1%);
+  bottom: calc(50% - (50% * 0.743145) + 1.5%);
+}
+
+.minute24{
+  transform: rotate(54deg);
+  right: calc(50% - (50% * 0.587785) - 1.5%);
+  bottom: calc(50% - (50% * 0.809017) + 2%);
+}
+
+/*top and bottom ticks 60 - 90 degrees up and down from horizontal*/
+.minute4{
+  transform: rotate(-66deg);
+  right: calc(50% - (50% * 0.4067366) - 1.5%);
+  top: calc(50% - (50% * 0.913554546) + 2%);
+}
+
+.minute3{
+  transform: rotate(-72deg);
+  right: calc(50% - (50% * 0.309017) - 1.5%);
+  top: calc(50% - (50% * 0.9510565) + 2%);
+}
+
+.minute2{
+  transform: rotate(-78deg);
+  right: calc(50% - (50% * 0.2079116) - 2%);
+  top: calc(50% - (50% * 0.9781476) + 2.25%);
+}
+
+.minute1{
+  transform: rotate(-84deg);
+  right: calc(50% - (50% * 0.10452846) - 2%);
+  top: calc(50% - (50% * 0.9945219) + 2.5%);
+}
+
+.minute56{
+  transform: rotate(248deg);
+  left: calc(50% - (50% * 0.4067366) - 1.5%);
+  top: calc(50% - (50% * 0.913554546) + 2%);
+}
+
+.minute57{
+  transform: rotate(252deg);
+  left: calc(50% - (50% * 0.309017) - 1.5%);
+  top: calc(50% - (50% * 0.9510565) + 2%);
+}
+
+.minute58{
+  transform: rotate(258deg);
+  left: calc(50% - (50% * 0.2079116) - 2%);
+  top: calc(50% - (50% * 0.9781476) + 2.25%);
+}
+
+.minute59{
+  transform: rotate(264deg);
+  left: calc(50% - (50% * 0.10452846) - 2%);
+  top: calc(50% - (50% * 0.9945219) + 2.5%);
+}
+
+.minute26{
+  transform: rotate(66deg);
+  right: calc(50% - (50% * 0.4067366) - 1.5%);
+  bottom: calc(50% - (50% * 0.913554546) + 2%);
+}
+
+.minute27{
+  transform: rotate(72deg);
+  right: calc(50% - (50% * 0.309017) - 1.5%);
+  bottom: calc(50% - (50% * 0.9510565) + 2%);
+}
+
+.minute28{
+  transform: rotate(78deg);
+  right: calc(50% - (50% * 0.2079116) - 2%);
+  bottom: calc(50% - (50% * 0.9781476) + 2.25%);
+}
+
+.minute29{
+  transform: rotate(84deg);
+  right: calc(50% - (50% * 0.10452846) - 2%);
+  bottom: calc(50% - (50% * 0.9945219) + 2.5%);
+}
+
+.minute34{
+  transform: rotate(114deg);
+  left: calc(50% - (50% * 0.4067366) - 1.5%);
+  bottom: calc(50% - (50% * 0.913554546) + 2%);
+}
+
+.minute33{
+  transform: rotate(108deg);
+  left: calc(50% - (50% * 0.309017) - 1.5%);
+  bottom: calc(50% - (50% * 0.9510565) + 2%);
+}
+
+.minute32{
+  transform: rotate(102deg);
+  left: calc(50% - (50% * 0.2079116) - 2%);
+  bottom: calc(50% - (50% * 0.9781476) + 2.25%);
+}
+
+.minute31{
+  transform: rotate(96deg);
+  left: calc(50% - (50% * 0.10452846) - 2%);
+  bottom: calc(50% - (50% * 0.9945219) + 2.5%);
 }

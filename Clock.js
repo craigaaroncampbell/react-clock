@@ -12,6 +12,7 @@ var Clock = React.createClass({
 
   getTime: function() {
     var time = moment().format('hh:mm:ss');
+    // time = moment('00:00:55', 'hh:mm:ss').format('hh:mm:ss')
     this.setState({
       time: time
     });
@@ -44,8 +45,14 @@ var Clock = React.createClass({
           </div>
 
           {this.props.hours.map(function(hour){
-            return <div key={hour} className={'hour'+ hour + ' hour'}><p>{hour}</p></div>
+            return <div key={'h' + hour} className={'hour'+ hour + ' hour'}><p>{hour}</p></div>
           })}
+
+          {this.props.minutes.map(function(minute){
+            return <div key={'m' + minute} className={'minute'+ minute + ' minute'}></div>
+          })}
+
+
 
         </div>
       </div>
