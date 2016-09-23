@@ -1,26 +1,41 @@
 import React from 'react';
 import moment from  'moment';
-var times;
-var Clock = React.createClass({
+import { createStore } from 'redux';
+
+function currentTime(time='getting the current time!!!', action) {
+    switch(action.type) {
+      case 'TICK':
+        time = moment().format('hh:mm:ss');
+        return time;
+      default:
+        return time;
+    }
+}
+
+let store = createStore(currentTime);
+
+let times;
+let Clock = React.createClass({
+  componentWillMount: function() {
+    store.subscribe(() => {
+      var state = store.getState();
+      this.setState({
+        time: state
+      })
+    });
+  },
+
   componentDidMount: function() {
-    times = setInterval(this.getTime, 1000);
+    times = setInterval(() => store.dispatch({type: 'TICK'}) , 1000);
   },
 
   componentWillUnmount: function() {
     clearInterval(times);
   },
 
-  getTime: function() {
-    var time = moment().format('hh:mm:ss');
-    // time = moment('00:00:55', 'hh:mm:ss').format('hh:mm:ss')
-    this.setState({
-      time: time
-    });
-  },
-
   getInitialState: function() {
     return {
-      time: "getting current time..."
+      time: store.getState()
     }
   },
 
@@ -51,8 +66,6 @@ var Clock = React.createClass({
           {this.props.minutes.map(function(minute){
             return <div key={'m' + minute} className={'minute'+ minute + ' minute'}></div>
           })}
-
-
 
         </div>
       </div>
