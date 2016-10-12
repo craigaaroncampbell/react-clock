@@ -1,4 +1,4 @@
-#css clock with React and Redux#
+#CSS Clock with React and Redux#
 
 Analog clock that moves hands according to the current time. Built to practice React/Redux as well as CSS layout.
 
